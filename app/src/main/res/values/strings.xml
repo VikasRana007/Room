@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RoomLibraryProject</string>
+    <string name="subscriber_name">Subscriber\'s Name</string>
+    <string name="subscriber_email">Subscriber\'s Email</string>
+    <string name="clear_all">Clear All</string>
+    <string name="save">Save</string>
+</resources>
