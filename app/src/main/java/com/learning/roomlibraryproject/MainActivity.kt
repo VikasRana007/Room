@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
         subscriberViewModel = ViewModelProvider(this, factory).get(SubscriberViewModel::class.java)
         activityMainBinding.myViewModel = subscriberViewModel
         activityMainBinding.lifecycleOwner = this
-        displayScubscriberList()
+        displaySubscribersList()
 
     }
 
 
-    private fun displayScubscriberList() {
+    private fun displaySubscribersList() {
         subscriberViewModel.subscriber.observe(this, Observer { Log.i("MyTag", it.toString()) })
     }
 }

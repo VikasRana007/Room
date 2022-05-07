@@ -37,9 +37,12 @@ class SubscriberViewModel(private val repository: SubscriberRepository) : ViewMo
         clearAll()
     }
 
-    // from we can call to the insert function of repository passing the subscriber instance
-    // and in the view model we should alwyas do calls from back ground thread but here we have
-    // viewModelScope luckily so use it , so no need to use dispatcher coroutine builder its by default coroutine scope
+    /** from we can call to the insert function of repository passing the subscriber instance
+     * and in the view model we should alwyas do calls from back ground thread but here we have
+     * viewModelScope luckily so use it , so no need to use dispatcher coroutine builder its by
+     * default coroutine scope,.
+     */
+
     fun insert(subscriber: Subscriber): Job =
         viewModelScope.launch { repository.insert(subscriber) }
 

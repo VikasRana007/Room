@@ -45,13 +45,14 @@ interface SubscriberDAO {
 
     /**
      * Asynchronous Query because of these query which has a LiveData as a return value, room always
-     * run them on the background thread by itself so we dont have to write special code to run them in the background
+     * run them on the background thread by itself so we don't have to write special code to run them in the background
      * also we have to use Coroutine , AsyncTask or executors to execute these functions
      */
 
 
     // write fun below to get the list of all subscribers entities from the database as LiveData
-    // we have not use suspend modifier cuase no need to run it in the background thread using coroutines
+    // we have not use suspend modifier cause no need to run it in the background thread
+    // using coroutines by default room handles it.
 
     @Query("SELECT* FROM subscriber_data_table ")
     fun getAllSubscriber():LiveData<List<Subscriber>>

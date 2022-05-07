@@ -11,10 +11,11 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Subscriber::class], version = 1)
 abstract class SubscriberDataBase : RoomDatabase() {
-    // we have only one entity class and a corresponding DAO Interface.
+    // we have only one entity class and a corresponding DAO Interface. so we
+    // need one DAO interface corresponding with entity class to access data
     abstract val subscriberDAO: SubscriberDAO
 
-    // make a one instance to use in whole application Singleton Instance.
+    // make one instance to use in whole application Singleton Instance to access invoke data
 
     companion object {
         private var INSTANCE: SubscriberDataBase? = null
