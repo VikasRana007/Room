@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
  * This class is used to represent the actual data of application and it a sub class of RoomDatabase clss
  */
 
-@Database(entities = [Subscriber::class], version = 1)
+@Database(entities = [Subscriber::class], version = 1, exportSchema = false)
 abstract class SubscriberDataBase : RoomDatabase() {
     // we have only one entity class and a corresponding DAO Interface. so we
     // need one DAO interface corresponding with entity class to access data
